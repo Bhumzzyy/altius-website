@@ -1,138 +1,301 @@
-// export default function Courses() {
+// 'use client';
+
+// const programs = [
+//   {
+//     title: "Academic Tutoring",
+//     desc: "Tutoring and academic support to help students build confidence and strengthen their understanding of important subjects like Math, Science, English, and more.",
+//     anchor: "#academic-tutoring",
+//     icon: (
+//       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+//       </svg>
+//     )
+//   },
+//   {
+//     title: "Language Programs",
+//     desc: "Language learning programs in English, French, and Punjabi focused on developing critical skills such as speaking, listening, reading, and writing.",
+//     anchor: "#language-programs",
+//     icon: (
+//       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+//       </svg>
+//     )
+//   },
+//   {
+//     title: "TCF & TEF Preparation",
+//     desc: "Targeted preparation programs for French language examinations like TCF and TEF to build confidence, test format familiarity, and communication skills.",
+//     anchor: "#tcf-tef-preparation",
+//     icon: (
+//       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+//       </svg>
+//     )
+//   },
+//   {
+//     title: "Music Programs",
+//     desc: "Programs that help students develop creativity, confidence, discipline, and performance skills while exploring rhythm and musical concepts.",
+//     anchor: "#music-programs",
+//     icon: (
+//       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+//       </svg>
+//     )
+//   },
+//   {
+//     title: "Co-op & Career-Focused Programs",
+//     desc: "Connecting learning with real-world skills, practical learning experiences, and career exploration across multiple industries.",
+//     anchor: "#coop-career-programs",
+//     icon: (
+//       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+//       </svg>
+//     )
+//   },
+//   {
+//     title: "CNC Programming",
+//     desc: "Introducing students to concepts related to CNC technology, computer-aided manufacturing, machine operations, and technical design.",
+//     anchor: "#cnc-programming",
+//     icon: (
+//       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+//       </svg>
+//     )
+//   },
+//   {
+//     title: "3D Printing & Technology",
+//     desc: "Hands-on technology programs covering 3D design, printing, robotics, artificial intelligence concepts, and creative problem-solving.",
+//     anchor: "#3d-printing-technology",
+//     icon: (
+//       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+//       </svg>
+//     )
+//   },
+//   {
+//     title: "Welding & Skilled Trades",
+//     desc: "Career-focused foundational learning introducing students to welding concepts, safety awareness, workplace skills, and skilled trades awareness.",
+//     anchor: "#welding-skilled-trades",
+//     icon: (
+//       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+//         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+//       </svg>
+//     )
+//   }
+// ];
+
+// export default function ProgramsSection() {
 //   return (
-//     <section id="courses" className="py-24 px-6 bg-altiusNavy text-white">
-//       <div className="max-w-6xl mx-auto">
-//         <div className="text-center max-w-2xl mx-auto mb-16">
-//           <span className="text-altiusGold font-semibold uppercase tracking-widest text-xs">Academic Excellence</span>
-//           <h2 className="font-serif text-3xl md:text-4xl font-bold mt-2 text-white">Our Core Programs</h2>
-//           <p className="text-gray-300 mt-3 text-sm">Explore our specialized curriculum designed to foster deep understanding, critical thinking, and stellar exam results.</p>
+//     <section className="py-24 px-6 bg-altiusLight text-altiusNavy">
+//       <div className="max-w-7xl mx-auto space-y-16">
+        
+//         {/* Section Header */}
+//         <div className="text-center max-w-2xl mx-auto space-y-3">
+//           <span className="text-altiusGold font-semibold uppercase tracking-widest text-[20px]">
+//             What We Offer
+//           </span>
+//           <h2 className="font-serif text-3xl sm:text-[45px] font-bold text-altiusNavy">
+//             Our Programs
+//           </h2>
+//           <p className="text-gray-600 text-[18px]">
+//             Comprehensive learning opportunities designed for today&apos;s students and tomorrow&apos;s careers.
+//           </p>
 //         </div>
 
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-//           {/* Program 1 */}
-//           <div className="bg-[#112244] p-8 rounded-2xl border border-white/10 shadow-xl flex flex-col justify-between hover:border-altiusGold/50 transition">
-//             <div>
-//               <span className="inline-block bg-altiusBlue/30 text-altiusBlue text-xs font-bold px-3 py-1 rounded-full mb-4">Grades 6 - 10</span>
-//               <h3 className="font-bold text-2xl mb-3 text-white">Foundation Batches</h3>
-//               <p className="text-gray-300 text-sm leading-relaxed mb-6">Comprehensive coaching tailored for school students building conceptual clarity early on to handle advanced academics with ease.</p>
-//               <ul className="space-y-2 text-xs text-gray-300 mb-8">
-//                 <li>✓ Strong conceptual building blocks</li>
-//                 <li>✓ Regular weekly assessments</li>
-//                 <li>✓ Dedicated doubt-clearing sessions</li>
-//               </ul>
-//             </div>
-//             <a href="/contact" className="block text-center bg-altiusBlue text-white py-3 rounded-xl font-semibold text-sm hover:bg-blue-600 transition">
-//               Enquire Now
-//             </a>
-//           </div>
+//         {/* Programs Grid */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+//           {programs.map((program, index) => (
+//             <div 
+//               key={index} 
+//               style={{ borderRadius: '10px' }}
+//               className="bg-white p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between space-y-6"
+//             >
+//               <div className="space-y-4">
+//                 <div className="w-12 h-12 rounded-[10px] bg-altiusNavy text-altiusGold flex items-center justify-center shadow-sm">
+//                   {program.icon}
+//                 </div>
+//                 <h3 className="font-serif font-bold text-lg text-altiusNavy leading-snug">
+//                   {program.title}
+//                 </h3>
+//                 <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+//                   {program.desc}
+//                 </p>
+//               </div>
 
-//           {/* Program 2 */}
-//           <div className="bg-[#112244] p-8 rounded-2xl border border-altiusGold/30 shadow-xl flex flex-col justify-between hover:border-altiusGold transition relative">
-//             <div className="absolute -top-3 right-6 bg-altiusGold text-altiusNavy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-//               Popular
+//               <div className="pt-2">
+//                 <a 
+//                   href={`/programs${program.anchor}`} 
+//                   className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-altiusBlue hover:underline"
+//                 >
+//                   Learn More &rarr;
+//                 </a>
+//               </div>
 //             </div>
-//             <div>
-//               <span className="inline-block bg-altiusGold/20 text-altiusGold text-xs font-bold px-3 py-1 rounded-full mb-4">Grades 11 - 12 & Beyond</span>
-//               <h3 className="font-bold text-2xl mb-3 text-white">Advanced Test Prep</h3>
-//               <p className="text-gray-300 text-sm leading-relaxed mb-6">Rigorous problem-solving methodologies, high-level mock exam series, and strategy sessions designed specifically for top competitive ranks.</p>
-//               <ul className="space-y-2 text-xs text-gray-300 mb-8">
-//                 <li>✓ High-difficulty question banks</li>
-//                 <li>✓ All-India simulated mock tests</li>
-//                 <li>✓ Time management strategies</li>
-//               </ul>
-//             </div>
-//             <a href="/contact" className="block text-center bg-altiusGold text-altiusNavy py-3 rounded-xl font-semibold text-sm hover:bg-yellow-500 transition">
-//               Enquire Now
-//             </a>
-//           </div>
-
-//           {/* Program 3 */}
-//           <div className="bg-[#112244] p-8 rounded-2xl border border-white/10 shadow-xl flex flex-col justify-between hover:border-altiusBlue/50 transition">
-//             <div>
-//               <span className="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">All Levels</span>
-//               <h3 className="font-bold text-2xl mb-3 text-white">1-on-1 Mentorship</h3>
-//               <p className="text-gray-300 text-sm leading-relaxed mb-6">Personalized progress tracking, customized study schedules, and individual guidance sessions paired directly with expert faculty mentors.</p>
-//               <ul className="space-y-2 text-xs text-gray-300 mb-8">
-//                 <li>✓ Tailored individual roadmaps</li>
-//                 <li>✓ Personal academic counselor</li>
-//                 <li>✓ Performance deep-dives</li>
-//               </ul>
-//             </div>
-//             <a href="/contact" className="block text-center bg-altiusBlue text-white py-3 rounded-xl font-semibold text-sm hover:bg-blue-600 transition">
-//               Enquire Now
-//             </a>
-//           </div>
+//           ))}
 //         </div>
+
 //       </div>
 //     </section>
 //   );
 // }
-export default function Courses() {
+
+
+'use client';
+
+const programs = [
+  {
+    title: "Academic Tutoring",
+    desc: "Tutoring and academic support to help students build confidence and strengthen their understanding of important subjects like Math, Science, English, and more.",
+    anchor: "#academic-tutoring",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+      </svg>
+    )
+  },
+  {
+    title: "Language Programs",
+    desc: "Language learning programs in English, French, and Punjabi focused on developing critical skills such as speaking, listening, reading, and writing.",
+    anchor: "#language-programs",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+      </svg>
+    )
+  },
+  {
+    title: "TCF & TEF Preparation",
+    desc: "Targeted preparation programs for French language examinations like TCF and TEF to build confidence, test format familiarity, and communication skills.",
+    anchor: "#tcf-tef-preparation",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    )
+  },
+  {
+    title: "Music Programs",
+    desc: "Programs that help students develop creativity, confidence, discipline, and performance skills while exploring rhythm and musical concepts.",
+    anchor: "#music-programs",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+      </svg>
+    )
+  },
+  {
+    title: "Co-op & Career-Focused Programs",
+    desc: "Connecting learning with real-world skills, practical learning experiences, and career exploration across multiple industries.",
+    anchor: "#coop-career-programs",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    )
+  },
+  {
+    title: "CNC Programming",
+    desc: "Introducing students to concepts related to CNC technology, computer-aided manufacturing, machine operations, and technical design.",
+    anchor: "#cnc-programming",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    )
+  },
+  {
+    title: "3D Printing & Technology",
+    desc: "Hands-on technology programs covering 3D design, printing, robotics, artificial intelligence concepts, and creative problem-solving.",
+    anchor: "#3d-printing-technology",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    )
+  },
+  {
+    title: "Welding & Skilled Trades",
+    desc: "Career-focused foundational learning introducing students to welding concepts, safety awareness, workplace skills, and skilled trades awareness.",
+    anchor: "#welding-skilled-trades",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    )
+  }
+];
+
+export default function ProgramsSection() {
   return (
-    <section id="courses" className="py-24 px-6 bg-altiusNavy text-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-altiusGold font-semibold uppercase tracking-widest text-xs">Academic Excellence</span>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mt-2">Our Core Programs</h2>
-          <p className="text-gray-300 mt-3 text-sm">Explore our structured curriculums designed to help students master concepts and achieve top academic ranks.</p>
-        </div>
+    <section className="py-24 px-6 bg-altiusLight text-altiusNavy overflow-hidden">
+      <div className="max-w-7xl mx-auto space-y-16">
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Program 1 */}
-          <div className="bg-[#112244] p-8 rounded-2xl border border-white/10 shadow-xl flex flex-col justify-between hover:border-altiusGold/50 transition">
-            <div>
-              <span className="inline-block bg-altiusBlue/30 text-altiusBlue text-xs font-bold px-3 py-1 rounded-full mb-4">Grades 6 - 10</span>
-              <h3 className="font-bold text-2xl mb-3 text-white">Foundation Batches</h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">Comprehensive coaching tailored for school students building conceptual clarity early on to handle advanced academics with ease.</p>
-              <ul className="space-y-2 text-xs text-gray-300 mb-8">
-                <li>✓ Strong conceptual building blocks</li>
-                <li>✓ Regular weekly assessments</li>
-                <li>✓ Dedicated doubt-clearing sessions</li>
-              </ul>
-            </div>
-            <a href="/contact" className="block text-center bg-altiusBlue text-white py-3 rounded-xl font-semibold text-sm hover:bg-blue-600 transition">
-              Enquire Now
-            </a>
-          </div>
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto space-y-3">
+          <span className="text-altiusGold font-semibold uppercase tracking-widest text-[20px]">
+            What We Offer
+          </span>
+          <h2 className="font-serif text-3xl sm:text-[45px] font-bold text-altiusNavy">
+            Our Programs
+          </h2>
+          <p className="text-gray-600 text-[18px]">
+            Comprehensive learning opportunities designed for today&apos;s students and tomorrow&apos;s careers.
+          </p>
+        </div>
 
-          {/* Program 2 */}
-          <div className="bg-[#112244] p-8 rounded-2xl border border-altiusGold/30 shadow-xl flex flex-col justify-between hover:border-altiusGold transition relative">
-            <div className="absolute -top-3 right-6 bg-altiusGold text-altiusNavy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-              Popular
-            </div>
-            <div>
-              <span className="inline-block bg-altiusGold/20 text-altiusGold text-xs font-bold px-3 py-1 rounded-full mb-4">Grades 11 - 12 & Beyond</span>
-              <h3 className="font-bold text-2xl mb-3 text-white">Advanced Test Prep</h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">Rigorous problem-solving methodologies, high-level mock exam series, and strategy sessions designed specifically for top competitive ranks.</p>
-              <ul className="space-y-2 text-xs text-gray-300 mb-8">
-                <li>✓ High-difficulty question banks</li>
-                <li>✓ All-India simulated mock tests</li>
-                <li>✓ Time management strategies</li>
-              </ul>
-            </div>
-            <a href="/contact" className="block text-center bg-altiusGold text-altiusNavy py-3 rounded-xl font-semibold text-sm hover:bg-yellow-500 transition">
-              Enquire Now
-            </a>
-          </div>
+      </div>
 
-          {/* Program 3 */}
-          <div className="bg-[#112244] p-8 rounded-2xl border border-white/10 shadow-xl flex flex-col justify-between hover:border-altiusBlue/50 transition">
-            <div>
-              <span className="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">All Levels</span>
-              <h3 className="font-bold text-2xl mb-3 text-white">1-on-1 Mentorship</h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">Personalized progress tracking, customized study schedules, and individual guidance sessions paired directly with expert faculty mentors.</p>
-              <ul className="space-y-2 text-xs text-gray-300 mb-8">
-                <li>✓ Tailored individual roadmaps</li>
-                <li>✓ Personal academic counselor</li>
-                <li>✓ Performance deep-dives</li>
-              </ul>
+      {/* Programs Marquee Container */}
+      <div className="w-full overflow-hidden relative flex py-4 mt-8">
+        <div className="flex gap-6 shrink-0 animate-marquee hover:[animation-play-state:paused]">
+          {[...programs, ...programs].map((program, index) => (
+            <div 
+              key={index} 
+              style={{ borderRadius: '10px', width: '320px' }}
+              className="bg-white p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between space-y-6 shrink-0"
+            >
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-[5px] bg-altiusNavy text-altiusGold flex items-center justify-center shadow-sm">
+                  {program.icon}
+                </div>
+                <h3 className="font-serif font-bold text-lg text-altiusNavy leading-snug">
+                  {program.title}
+                </h3>
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                  {program.desc}
+                </p>
+              </div>
+
+              <div className="pt-2">
+                <a 
+                  href={`/programs${program.anchor}`} 
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-altiusBlue hover:underline"
+                >
+                  Learn More &rarr;
+                </a>
+              </div>
             </div>
-            <a href="/contact" className="block text-center bg-altiusBlue text-white py-3 rounded-xl font-semibold text-sm hover:bg-blue-600 transition">
-              Enquire Now
-            </a>
-          </div>
+          ))}
         </div>
       </div>
+
+      {/* Tailwind Animation Styling */}
+      <style jsx global>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          display: flex;
+          width: max-content;
+          animation: marquee 35s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }
