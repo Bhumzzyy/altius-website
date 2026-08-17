@@ -5,12 +5,11 @@ import Image from 'next/image';
 export default function ContactHero() {
   return (
     <section className="relative w-full">
-      {/* Uniform Banner Height & bg1.png */}
       <div className="relative h-[300px] sm:h-[380px] w-full bg-altiusNavy">
-        <Image 
-          src="/bg1.png" 
-          alt="Contact Altius Education" 
-          fill 
+        <Image
+          src="/bg1.png"
+          alt="Contact Altius Education"
+          fill
           priority
           className="object-cover object-center opacity-70"
         />
@@ -23,7 +22,8 @@ export default function ContactHero() {
               Contact Us
             </h1>
             <p className="text-gray-300 text-xs sm:text-sm max-w-md mx-auto leading-relaxed pt-1">
-              Altius is ready to provide the right solution according to your educational needs.
+              Tell us your child&apos;s grade and we&apos;ll recommend the right stage of the
+              FutureReady™ journey.
             </p>
           </div>
         </div>

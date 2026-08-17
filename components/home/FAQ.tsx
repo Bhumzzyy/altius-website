@@ -4,21 +4,34 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    question: "Do you prepare students for competitive entrance exams?",
-    answer: "Yes. We provide comprehensive, structured coaching for national and state-level entrance exams, including NEET, JEE, and GUJCET, with a focus on deep conceptual clarity."
+    question: "Is this just another tutoring or classes program?",
+    answer:
+      "No. FutureReady™ is a structured 8-year system (Grades 5–12). Tutoring teaches subjects; FutureReady builds careers — students accumulate real evidence across leadership, technology, business, finance, and career readiness in their Passport each year.",
   },
   {
-    question: "Which academic streams do you specialise in?",
-    answer: "We specialise in Foundation programs for school students (Class 8th to 10th) as well as higher secondary Science and Commerce streams tailored for academic excellence."
+    question: "How does the Altius FutureReady Passport work?",
+    answer:
+      "Every year students collect proof of growth across seven competency pillars — communication, leadership, technology, innovation, business, financial literacy, and career readiness. By Grade 12 they graduate with a portfolio showing the projects, presentations, prototypes, and professional experiences they actually completed.",
   },
   {
-    question: "How do you support students struggling with specific topics?",
-    answer: "We provide dedicated 1-on-1 mentorship sessions, regular doubt-clearing hours, and personalized practice worksheets to help students master challenging topics."
-  }
+    question: "Which grade should my child join?",
+    answer:
+      "The system is designed to begin in Grade 5, but students can join at any grade. Each year's stage (Discover, Explore, Create, Develop, Experience, Specialize, Apply, Launch) builds on the previous one, so older students enter at their current stage.",
+  },
+  {
+    question: "What happens in Grade 10 when students choose a pathway?",
+    answer:
+      "Grade 10 students pick one of five career pathways — Engineering & Technology, Business & Entrepreneurship, Education & Leadership, Digital Media, or Manufacturing & Skilled Trades — and complete a full career portfolio including a resume, career plan, and mock interview.",
+  },
+  {
+    question: "Can students still take specialty programs like music or languages?",
+    answer:
+      "Yes. Specialty programs — academic tutoring, languages, TCF/TEF prep, music, CNC, 3D printing, and welding — run alongside the FutureReady journey for students who want to go deeper in a specific skill.",
+  },
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -27,8 +40,7 @@ export default function FAQ() {
   return (
     <section className="py-20 px-6 bg-white text-altiusNavy">
       <div className="max-w-4xl mx-auto">
-        
-        {/* Section Header with Icon */}
+
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-altiusGold font-semibold uppercase tracking-widest text-xs block mb-2">
             Got Questions?
@@ -38,24 +50,23 @@ export default function FAQ() {
           </h2>
         </div>
 
-        {/* FAQ List with Line Separators & SVG Arrow Icons */}
         <div className="divide-y divide-gray-200 border-t border-gray-200">
           {faqs.map((faq, index) => (
             <div key={index} className="py-6">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between text-left focus:outline-none group"
+                aria-expanded={openIndex === index}
+                className="w-full flex items-center justify-between text-left group"
               >
                 <span className="font-serif font-bold text-base sm:text-lg text-altiusNavy">
                   {faq.question}
                 </span>
-                
-                {/* SVG Chevron Arrow Icon matching the exact style */}
-                <span className="text-altiusNavy ml-4 shrink-0 transition-transform duration-300">
-                  <svg 
-                    className={`w-5 h-5 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : 'rotate-0'}`} 
-                    fill="none" 
-                    stroke="currentColor" 
+
+                <span className="text-altiusNavy ml-4 shrink-0">
+                  <svg
+                    className={`w-5 h-5 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />

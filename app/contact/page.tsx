@@ -1,11 +1,16 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactHero from '@/components/contact/ContactHero';
 import ContactInfoCard from '@/components/contact/ContactInfoCard';
 import ContactForm from '@/components/contact/ContactForm';
 import ContactMap from '@/components/contact/ContactMap';
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description:
+    'Book a consultation with the Altius FutureReady™ admissions desk and find the right grade stage for your child.',
+};
 
 export default function ContactPage() {
   return (
@@ -14,7 +19,6 @@ export default function ContactPage() {
         <Navbar />
         <ContactHero />
 
-        {/* Floating Overlapping Card Container */}
         <section className="relative px-6 -mt-20 sm:-mt-24 mb-16 z-20">
           <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl p-8 sm:p-12 border border-gray-200/80">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

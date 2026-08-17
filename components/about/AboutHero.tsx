@@ -6,12 +6,11 @@ import Link from 'next/link';
 export default function AboutHero() {
   return (
     <section className="relative w-full">
-      {/* Uniform Banner Height & bg1.png */}
       <div className="relative h-[300px] sm:h-[380px] w-full bg-altiusNavy">
-        <Image 
-          src="/bg1.png" 
-          alt="Altius Education Campus" 
-          fill 
+        <Image
+          src="/bg1.png"
+          alt="Altius Education Campus"
+          fill
           priority
           className="object-cover object-center opacity-70"
         />
@@ -27,7 +26,6 @@ export default function AboutHero() {
         </div>
       </div>
 
-      {/* Intro Text Section */}
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 space-y-3">
@@ -38,19 +36,30 @@ export default function AboutHero() {
               <span className="font-semibold uppercase tracking-widest text-xs">Who We Are</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-altiusNavy leading-snug">
-              Bridging Academic Excellence with Practical Future Skills
+              An 8-Year System for Career Readiness — Not a Regular Tuition Centre
             </h2>
           </div>
           <div className="lg:col-span-7 space-y-4 text-gray-600 text-sm leading-relaxed border-l-2 border-altiusGold/40 pl-6">
             <p>
-              ALTIUS EDUCATION INC. is an educational and training centre committed to providing quality learning opportunities for children, youth, and students preparing for future education and careers. We combine academic learning, creativity, technology, practical skills, and career exploration.
+              <strong className="text-altiusNavy">ALTIUS EDUCATION INC.</strong> is an educational
+              and training centre built around one flagship idea: the{" "}
+              <strong className="text-altiusNavy">Altius FutureReady™</strong> system — a structured
+              Grades 5–12 program that moves students through eight stages of career discovery,
+              leadership, technology, business, and real-world skills.
             </p>
             <p>
-              Whether you need academic tutoring, language programs (English, French, Punjabi), TCF/TEF exam prep, music education, or hands-on exposure to CNC programming, 3D printing, and skilled trades like welding, we provide a supportive environment to help you succeed.
+              Every year, students accumulate evidence in their <strong className="text-altiusNavy">FutureReady Passport</strong> —
+              projects, prototypes, presentations, and professional experiences. By Grade 12, they
+              leave with a portfolio showing what they actually did, not just a certificate.
+            </p>
+            <p>
+              Specialty offerings in academic tutoring, languages (English, French, Punjabi),
+              TCF/TEF prep, music, CNC programming, 3D printing, and skilled trades run alongside
+              the journey for students who want to go deeper in a specific skill.
             </p>
             <div className="pt-2">
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="inline-block bg-altiusNavy text-white text-xs font-semibold px-6 py-3 rounded-md shadow-sm hover:bg-altiusBlue transition tracking-wider uppercase"
               >
                 Contact Us Today

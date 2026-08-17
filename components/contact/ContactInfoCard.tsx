@@ -6,14 +6,13 @@ export default function ContactInfoCard() {
       <div>
         <h2 className="font-serif text-2xl font-bold text-altiusNavy mb-2">Get in touch</h2>
         <p className="text-gray-600 text-xs leading-relaxed">
-          Sociosqu viverra lectus placerat sem efficitur molestie vehicula cubilia leo etiam nam.
+          Book a FutureReady™ consultation and find out which grade stage your child should join
+          this year.
         </p>
       </div>
 
-      {/* Info Items with SVGs */}
       <div className="space-y-6">
-        
-        {/* Head Office */}
+
         <div className="flex items-start gap-4">
           <div className="w-10 h-10 rounded-md bg-altiusNavy text-altiusGold flex items-center justify-center shrink-0 shadow-sm border border-altiusGold/20">
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -21,12 +20,11 @@ export default function ContactInfoCard() {
             </svg>
           </div>
           <div>
-            <h4 className="font-bold text-sm text-altiusNavy">Head Office</h4>
-            <p className="text-gray-600 text-xs mt-0.5 leading-relaxed">Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia</p>
+            <h4 className="font-bold text-sm text-altiusNavy">Altius Education Centre</h4>
+            <p className="text-gray-600 text-xs mt-0.5 leading-relaxed">Surat, Gujarat, India</p>
           </div>
         </div>
 
-        {/* Email Us */}
         <div className="flex items-start gap-4">
           <div className="w-10 h-10 rounded-md bg-altiusNavy text-altiusGold flex items-center justify-center shrink-0 shadow-sm border border-altiusGold/20">
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -35,11 +33,10 @@ export default function ContactInfoCard() {
           </div>
           <div>
             <h4 className="font-bold text-sm text-altiusNavy">Email Us</h4>
-            <p className="text-gray-600 text-xs mt-0.5">support@yourdomain.tld<br />hello@yourdomain.tld</p>
+            <p className="text-gray-600 text-xs mt-0.5">info@altiuseducation.com</p>
           </div>
         </div>
 
-        {/* Call Us */}
         <div className="flex items-start gap-4">
           <div className="w-10 h-10 rounded-md bg-altiusNavy text-altiusGold flex items-center justify-center shrink-0 shadow-sm border border-altiusGold/20">
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -48,13 +45,12 @@ export default function ContactInfoCard() {
           </div>
           <div>
             <h4 className="font-bold text-sm text-altiusNavy">Call Us</h4>
-            <p className="text-gray-600 text-xs mt-0.5">Phone : +6221.2002.2012<br />Fax : +6221.2002.2013</p>
+            <p className="text-gray-600 text-xs mt-0.5">+91 XXXXX XXXXX<br />Mon–Sat, 9 AM – 8 PM</p>
           </div>
         </div>
 
       </div>
 
-      {/* Social Media Links */}
       <div className="pt-4">
         <h4 className="font-bold text-xs text-altiusNavy mb-3">Follow our social media</h4>
         <div className="flex items-center gap-3">

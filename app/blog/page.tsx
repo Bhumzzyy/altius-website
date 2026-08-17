@@ -1,7 +1,14 @@
+import type { Metadata } from 'next';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogLayout from '@/components/blog/BlogLayout';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+  title: 'FutureReady Insights & Blog',
+  description:
+    'Career readiness, leadership, technology, and parenting insights for families on the Altius FutureReady™ Grades 5–12 journey.',
+};
 
 export default function BlogPage() {
   return (
